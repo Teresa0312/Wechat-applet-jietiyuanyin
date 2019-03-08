@@ -1,0 +1,57 @@
+.container{
+  padding-top: 0;
+  overflow: hidden;
+  background: #F0EFF4;
+}
+.recmd{
+  padding: 25rpx 0;
+  margin-bottom: 12rpx;
+  display: flex;
+  background: white;
+  flex-direction: row;
+
+}
+
+.recmd-img{
+  width: 100rpx;
+  height: 100rpx;
+  padding: 20rpx;
+}
+
+.recmd-img image{
+  width: 80rpx;
+  height: 80rpx;
+  border: 1px solid gray;
+  padding: 2px;
+  border-radius: 50%;
+}
+
+.recmd-info{
+  width: 430rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.recmd-com{
+  font-size: 36rpx;
+  color: #333333;
+}
+
+.recmd-pro{
+  font-size: 28rpx;
+  padding-top: 10rpx;
+  color: #08365F;
+}
+
+.recmd-btn{
+  width: 200rpx;
+  margin-top: 40rpx;
+  font-size: 34rpx;
+}
+
+.bottom{
+  background: #e8e8e8;
+  font-size: 30rpx;
+  text-align: center;
+  padding: 10rpx;margin-top: -10rpx;
+}

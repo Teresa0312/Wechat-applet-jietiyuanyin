@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="sea-box">
+    <image src="../../image/index.png">
+    </image>
+  </view>
+
+  <view class="sea-in">
+      
+    <input class="search-input" confirm-type="search" type="text" placeholder="搜 索" />
+  </view>
+
+  <view class="pho-box">
+
+    <image src="../../image/photo.png">
+    </image>
+  </view>
+
+  <view class="tabs">
+    <view class="tab1"  bindtap="navtoQues">
+      <image src="../../image/ques.png"></image>
+      <text>题库</text>
+    </view>
+
+    <view class="tab2">
+      <view class="box" style=" margin-right: 15rpx;margin-bottom: 15rpx;border: 1px solid #0188FB;color: rgb(53,61,92);"  bindtap="navtoRecmd">
+      <image src="../../image/neitui.png"></image>
+
+        <text>内推</text>
+      </view>
+      <view class="box" style="background: #E8E8E8;color: rgb(0,98,196);"   bindtap="navtoSetque">
+        <image src="../../image/chuti.png"></image>
+        <text>我要\n出题</text>
+
+      </view>
+
+      <view class="box" style="margin-right: 15rpx;margin-bottom:15rpx;background: rgb(170,213,255);color: rgb(53,61,92);"  bindtap="navtoU_types">
+        <image src="../../image/ques2.png"></image>
+        <text>用户\n题库</text>
+
+      </view>
+      <view class="box" style=" border: 1px solid gray;color: #0188FB;"  bindtap="navtoL_types">
+        <image src="../../image/lanqiao.png"></image>
+        <text>蓝桥</text>
+
+      </view>
+      
+    </view>
+
+
+  </view>
+
+ 
+  
+
+</view>

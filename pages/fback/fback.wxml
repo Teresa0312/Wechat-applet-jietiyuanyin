@@ -1,0 +1,12 @@
+<view class="container">
+	
+		<form bindsubmit="bindFormSubmit">
+		<textarea style="border-bottom: 1px solid #E8E8E8;padding: 10rpx;width: 750rpx" placeholder="请输入您的意见或建议以帮助我们改进" bindblur="bindTextAreaBlur"/>
+		<button  style="background: #0188FB;margin-top: 30rpx;border: 0;color: white;text-align: center;border-radius: 0;margin: 40rpx 30rpx;border-radius: 4px;height: 90rpx;font-size: 36rpx" form-type="submit"> 提交 </button>
+		</form>
+	
+<!--
+	<view style="background: #0188FB;margin-top: 30rpx;border: 0;color: white;text-align: center;border-radius: 0;padding: 20rpx;margin: 40rpx 30rpx;border-radius: 4px;">
+		<text bindtap="submit">提交</text>
+	</view>-->
+</view>

@@ -1,0 +1,84 @@
+<view class="container">
+
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+<form bindsubmit="bindFormSubmit">
+  <view class="modal-title">请确认个人信息</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      
+      <view class="change">
+          <text>姓名 </text>
+          <input bindblur="setName" value="{{userInfo.realname}}"/>
+      </view>
+      <view class="change">
+          <text>邮箱 </text>
+          <input bindblur="setEmail" value="{{userInfo.email}}"/>
+      </view>
+      <view class="change">
+          <text>手机号 </text>
+          <input bindblur="setPhone" value="{{userInfo.phone}}"/>
+      </view>
+      <view class="change">
+          <text>学校 </text>
+          <input bindblur="setSchool" value="{{userInfo.school}}"/>
+      </view>
+      <view class="change">
+          <text>专业 </text>
+          <input bindblur="setMajor" value="{{userInfo.major}}"/>
+      </view>
+      <picker mode="date" bindchange="bindSDateChange" class="change" style="line-height: 82rpx" > 
+        <text>入校时间 </text>
+        <text style="color: black">{{sdate}} </text>
+      </picker>
+      <picker mode="date" bindchange="bindEDateChange" class="change"  style="line-height: 82rpx" >
+        <text>毕业时间 </text>
+        <text style="color: black">{{edate}}  </text>
+      </picker>
+
+    </view>
+  </view>
+  <view class="modal-footer">
+    <!--<view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>-->
+    <button class="btn-confirm" form-type="submit">确定</button>
+
+  </view>
+  </form>
+</view>
+
+
+
+<block wx:if="{{start==0}}">
+<view class="top">
+	<text>{{company}}内推测试</text>
+</view>
+<view class="wel">
+	<text>总共有{{problemSet.length}}道题</text>
+	<text>限时10分钟</text>
+	<view class="start-btn" bindtap="startTest"><text>开始答题</text></view>
+</view>
+</block>
+
+<block wx:elif="{{start==1}}">
+<view class="top" style="background: #ECECEC"  style="position: fixed;top: 0;width:100%;color: white">
+	<text class="width50">{{company}}内推测试</text>
+  <text style="text-align: right;padding-right: 30rpx" class="width50">{{countDownMinute}}:{{countDownSecond}}</text>
+</view>
+<view style="margin-top:100rpx">
+<view wx:for="{{problemSet}}" class="question" wx:for-item="que">
+  <view style="width: 100%;background: #F7F7F7;padding: 20rpx">
+    <text class="head">题目{{index+1}} {{que.name}} </text>
+    <text> ( </text>
+    <text style="font-size: 42rpx;color: #0188FB"> {{ansSet[que.id]}} </text>
+    <text> )</text>
+  </view>
+    <view class="que-detail">
+      <view class="que-choice" wx:for="{{que.answer}}" wx:for-item="item">
+          <view class="queInfo-item" data-id="{{que.id}}" data-ans="{{index}}" bindtap="setAns"> {{index}}. {{item}}</view>
+      </view>
+    </view>
+</view>
+</view>
+<button  style="background: #0188FB;margin-top: 30rpx;border: 0;color: white;text-align: center;border-radius: 0;margin: 40rpx 30rpx;border-radius: 4px;height: 90rpx;font-size: 36rpx" bindtap="check"> 提交 </button>
+</block>
+</view>

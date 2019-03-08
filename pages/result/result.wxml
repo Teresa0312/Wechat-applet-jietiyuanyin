@@ -1,0 +1,20 @@
+<!--logs.wxml-->
+<view class="container">
+<block wx:if="{{result==0}}" >
+<view class="result">
+ <image src="../../image/success.png" class="res-img"></image>
+ <view class="des">恭喜你通过了测试!</view>
+<button  style="background: #0188FB;margin-top: 30rpx;border: 0;color: white;text-align: center;border-radius: 0;margin: 40rpx 30rpx;border-radius: 4px;height: 90rpx;font-size: 36rpx" bindtap=" navtoRecmd"> 查看更多内推 </button>
+</view>
+</block>
+
+<block wx:if="{{result==1}}" >
+<view class="result">
+ <image src="../../image/fail.png" class="res-img"></image>
+ <view class="des">没有通过测试 请继续努力!</view>
+ <button  style="background: #0188FB;margin-top: 30rpx;border: 0;color: white;text-align: center;border-radius: 0;margin: 40rpx 30rpx;border-radius: 4px;height: 90rpx;font-size: 36rpx" bindtap="navtoRecmd"> 查看更多内推 </button>
+</view>	
+</block>
+
+
+</view>

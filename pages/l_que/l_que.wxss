@@ -1,0 +1,95 @@
+@import "/wxParse/wxParse.wxss";
+
+.container{
+  padding-top: 0;
+  overflow: hidden;
+  padding-bottom: 50rpx;
+}
+.question{
+  padding: 20rpx;
+  font-size: 32rpx;
+  line-height: 1.7;
+}
+
+
+.top{
+  width: 100%;
+  background: white;
+  margin-bottom: 5px;
+}
+.answer{
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+  background: #E8E8E8;
+}
+
+.answer-infor{
+  background: white;
+  padding: 6px 12px;
+  border-bottom: 10rpx solid #E8E8E8;
+}
+
+.user-img{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-info{
+  height: 66rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.user{
+  padding-left: 16rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.time{
+  font-size: 20rpx;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.ans{
+  padding:16rpx;
+  line-height: 1.7;
+  font-size: 30rpx;
+  padding-top:30rpx; 
+}
+
+.star{
+  height: 40rpx;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+  color: gray;
+}
+
+.star{
+  display: flex;
+  flex-direction: row;
+}
+
+.star image{
+  height: 38rpx;
+  width: 38rpx;
+}
+
+
+.heart{
+  position: relative;
+  left: 660rpx;
+  top: -20rpx;
+}
+
+.heart image{
+  width: 38rpx;
+  height: 38rpx;
+
+}

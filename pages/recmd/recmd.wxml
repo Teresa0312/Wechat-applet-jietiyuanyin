@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="recmd" wx:for="{{recmd}}">
+    <viwe class="recmd-img">
+      <image src="{{item.imgurl}}"></image>
+    </viwe>
+    <view class="recmd-info">
+      <text class="recmd-com">{{item.company}}</text>
+      <text class="recmd-pro" wx:if="{{item.online==1}}">内推人: {{item.nickname}} (在职)</text>
+      <text class="recmd-pro" wx:if="{{item.online==1}}">地  址: {{item.address}}  </text>
+
+    </view>
+    <view class="recmd-btn" data-com="{{item.company}}" bindtap="navtoApply"><text  data-com="{{item.company}}" style="padding: 15rpx;border-radius: 4px;background: #0188FB;color: white">申请内推</text></view>
+  </view>
+  <view class="bottom">已经到底啦</view>
+</view>

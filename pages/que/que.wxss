@@ -1,0 +1,41 @@
+.container {
+  background: #EBEBEB;
+} 
+
+
+.quebox{
+  background: white;
+  padding: 20rpx 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.que{
+    width: 100%;
+}
+
+.que-con{
+  font-size: 32rpx;
+}
+
+.que-type{
+    font-size: 28rpx;
+    color: #2795F7;
+}
+
+.quebox{
+    border: 1px solid #F6F6F6;
+    border-radius: 4px;
+}
+
+.info{
+    padding: 10rpx;
+    color: gray;
+    font-size: 32rpx;
+}
+
+.que-img{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+}
+

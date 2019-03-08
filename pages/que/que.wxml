@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view wx:for="{{queList}}" class="quebox" data-id="{{item.id}}" data-type="{{item.type}}" bindtap="showInfo">
+    <view class="que">
+      <text class="que-con">{{item.content}}</text>
+      <text class="que-type" wx:if="{{item.type==0}}">(选择题)</text>
+      <text class="que-type" wx:if="{{item.type==1}}">(简答题)</text>
+    </view>
+    <view class="info">
+      <image class="que-img" src="../../image/user_1.png"></image>
+      <text>浏览 {{item.num}}</text>
+      <image class="que-img" src="../../image/com.png" style="margin-left: 20rpx"></image>
+      <text>评论 {{item.num}}</text>
+    </view>
+  </view> 
+
+</view>

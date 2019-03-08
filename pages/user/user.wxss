@@ -1,0 +1,123 @@
+.container{
+  display: flex;
+  flex-direction: row;  
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 100%;
+}
+
+.alter{
+  width: 750rpx;  
+  height: 100rpx;
+  padding-top: 10rpx;
+  background: #0188FB;
+
+}
+
+.infor{
+  width: 750rpx;
+  height: 219rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: -65rpx;
+}
+
+.alter-img{
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+
+.userinfo {
+  width: 750rpx;  
+  height: 320rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo-avatar {
+  width: 120rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  margin-left: 10rpx;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.tabs{
+  width: 750rpx;
+  height: 230rpx;
+  padding: 15rpx;
+  display: flex;
+  background: #F2F2F2;
+  flex-direction: row;
+}
+
+.box{
+  width: 230rpx;
+  background: white;
+  height: 230rpx;
+  margin-right: 15rpx;
+  align-items: center;
+}
+
+.icon{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.icon text{
+  color: gray;
+  font-size: 32rpx;
+}
+
+
+.list{
+  width: 750rpx;
+}
+
+.list-box{
+  width: 100%;
+  height: 82rpx;
+  padding: 20rpx 20rpx;
+  font-size: 36rpx;
+  color: #272822;
+  display: flex;
+  letter-spacing: 2rpx;
+  flex-direction: row;
+  padding-bottom: 0;
+ 
+}
+
+.list-box image{
+  width: 45rpx;
+  height: 40rpx;
+  margin-right: 15rpx;
+  margin-top: 15rpx;
+}
+.border{
+  width: 700rpx;
+  height: 72rpx;
+  border-bottom: 0.5px solid #E8E8E8;
+}

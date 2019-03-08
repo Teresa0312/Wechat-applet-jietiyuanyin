@@ -1,0 +1,84 @@
+<view class="container">
+
+
+<cover-view class="modal-mask"  bindtap="hideModal"  catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></cover-view>
+<cover-view class="modal-dialog" wx:if="{{showModal}}">
+  <cover-view class="modal-title">请选择题目类型</cover-view>
+  <cover-view class="modal-content">
+      <cover-view wx:for="{{qtypes}}" class="chooset" data-id="{{item.id}}" data-id="{{item.id}}" data-name="{{item.name}}" bindtap="changeT" >{{item.name}}</cover-view>
+  </cover-view>
+</cover-view>
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="choose-type">
+	<text class="choose" data-id="0" bindtap="changeType" style="margin-left:30rpx;margin-right:10rpx;border-color: {{cres}};color:{{cres}}">选择题</text>
+	<text class="write" data-id="1"  bindtap="changeType" style="border-color: {{wres}};color:{{wres}}">简答题</text>
+</view>
+
+<block wx:if="{{type==0}}">
+	<form bindsubmit="bindSubmit">
+	<view class="que-title">
+		<textarea bindblur="setTitle" placeholder="请输入题目标题" />
+	</view>	
+	<view class="changetype" bindtap="showModal">
+		<text>请选择题目类型: </text>
+		<text>{{optype}}</text>
+	</view>
+	<view class="changetype" bindtap="changeStar">
+		<text>请选择星级: </text>
+		<text wx:if="{{star!=0}}">{{star}}</text>
+	</view>
+	<view class="changetype" bindtap="changeOp">
+		<text>请选择选项个数: </text>
+		<text wx:if="{{opNum!=0}}">{{opNum}}</text>
+	</view>
+	
+	<block wx:for="{{option}}" wx:if="{{index<opNum}}">
+		<view class="changetype">
+			<input bindblur="setChoice" data-id="{{item}}" placeholder="请输入选项{{item}}"/>
+		</view>
+	</block>
+	<block wx:if="{{opNum!=0}}">
+		<view class="changetype" bindtap="changeRight">
+			<text>请选择正确答案: </text>
+			<text>{{ans}}</text>
+		</view>
+	</block>
+	<view class="changetype">
+			<textarea bindblur="setInfor"  placeholder="请输入解析"/>
+	</view>
+	<button hover-class="none" form-type="submit"> 提交 </button>
+	</form>
+</block>
+
+
+<block wx:if="{{type==1}}">
+	<form bindsubmit="bindSubmit">
+	<view class="que-title">
+		<textarea bindblur="setTitle"  placeholder="请输入题目标题" />
+	</view>	
+	<view class="changetype" bindtap="showModal">
+		<text>请选择题目类型: </text>
+		<text>{{optype}}</text>
+	</view>
+	<view class="changetype" bindtap="changeStar">
+		<text>请选择星级: </text>
+		<text wx:if="{{star!=0}}">{{star}}</text>
+	</view>
+	<view class="que-title">
+		<textarea  bindblur="changeAns" placeholder="请输入答案" />
+	</view>	
+	<button hover-class="none" form-type="submit"> 提交 </button>
+	</form>
+</block>
+</view>

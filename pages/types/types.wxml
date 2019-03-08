@@ -1,0 +1,19 @@
+<view class="container">
+
+<view class="top">
+<text data-w="choice" data-c="0" bindtap="changeC" style="color:{{ccolor}}">选择题</text>
+<text data-w="short" data-c="1" bindtap="changeC"  style="color:{{scolor}}">简答题</text>
+</view>
+
+
+<block wx:if="{{choose==1}}">
+<view class="type" wx:for="{{typeList}}">
+  <text class="name">{{item.name}}</text>
+  <text class="sum">共{{item.number}}道 | 已练习0道</text>
+  <text class="start" data-id="{{item.id}}" data-type="{{op}}" data-s="{{item.number}}" bindtap="navtoMore" >开始答题</text>
+</view>
+
+
+<view class="bottom">我是有底线的~</view>
+</block>
+</view>

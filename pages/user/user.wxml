@@ -1,0 +1,39 @@
+<view class="container">
+  <view  class="userinfo">
+    <view class="alter">
+        <image class="alter-img" src="../../image/pen.png" bindtap="navtoAlter"></image>
+    </view>
+    <view class="infor">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view style="margin-bottom: 10rpx;color: #0188FB">
+        <text style="font-size: 36rpx;">{{userInfo.nickName}}</text>
+      </view>
+      <text style="font-size: 26rpx;color: gray">{{userInfo.school}}  {{userInfo.major}}</text>
+    </view>
+  </view>
+
+  
+
+
+
+
+  <view class="list">
+
+    <view class="list-box" bindtap="navtoFback">
+      <image src="../../image/email.png"></image>
+      <view class="border">
+      <text>用户反馈</text>
+      </view>
+    </view>
+
+    <view class="list-box">
+      <image src="../../image/clip.png"></image>
+      <view class="border">
+      <text>关于我们</text>
+      </view>
+    </view>    
+  </view>
+
+  
+
+</view>

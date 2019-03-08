@@ -1,0 +1,14 @@
+<view class="container">
+
+
+
+<view class="type" wx:for="{{typeList}}">
+  <text class="name">{{item.name}}</text>
+  <text class="sum">共{{item.number}}道 | 已练习0道</text>
+  <text class="start" data-id="{{item.id}}" data-s="{{item.number}}" bindtap="navtoMore" >开始答题</text>
+</view>
+
+
+<view class="bottom">我是有底线的~</view>
+
+</view>

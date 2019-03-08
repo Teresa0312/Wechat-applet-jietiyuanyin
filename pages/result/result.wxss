@@ -1,0 +1,28 @@
+.result{
+	padding-top: 100rpx;
+	align-items: center;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.res-img{
+	width: 150rpx;
+	height: 150rpx;
+	margin-bottom: 30rpx;
+}
+
+.res-score{
+	letter-spacing: 3rpx;
+	font-size: 36rpx;
+	margin-bottom: 20rpx;
+}
+
+.res-score text{
+	font-size: 48rpx;
+
+}
+
+.des{
+	font-size: 36rpx;
+}

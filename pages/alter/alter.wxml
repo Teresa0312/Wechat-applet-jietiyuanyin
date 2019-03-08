@@ -1,0 +1,38 @@
+<view class="container">
+  <form bindsubmit="bindFormSubmit">
+  <view class="change">
+      <text>姓名 </text>
+      <input bindblur="setName" value="{{userInfo.realname}}"/>
+  </view>
+  <view class="change">
+      <text>邮箱 </text>
+      <input bindblur="setEmail" value="{{userInfo.email}}"/>
+  </view>
+  <view class="change">
+      <text>手机号 </text>
+      <input bindblur="setPhone" value="{{userInfo.phone}}"/>
+  </view>
+  <view class="change">
+      <text>学校 </text>
+      <input bindblur="setSchool" value="{{userInfo.school}}"/>
+  </view>
+  <view class="change">
+      <text>专业 </text>
+      <input bindblur="setMajor" value="{{userInfo.major}}"/>
+  </view>
+  <view class="change">
+      
+      <picker mode="date" bindchange="bindSDateChange">
+        <text>入校时间 </text>
+        <text style="color: black">{{sdate}} </text>
+      </picker>
+  </view>
+  <view class="change">
+      <picker mode="date" bindchange="bindEDateChange">
+        <text>毕业时间 </text>
+        <text style="color: black">{{edate}}  </text>
+      </picker>
+  </view>
+  <button  style="background: #0188FB;margin-top: 30rpx;border: 0;color: white;text-align: center;border-radius: 0;margin: 40rpx 30rpx;border-radius: 4px;height: 90rpx;font-size: 36rpx" form-type="submit"> 提交 </button>
+  </form>
+</view>

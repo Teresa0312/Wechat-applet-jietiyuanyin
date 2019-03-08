@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/news/news",
+    "pages/user/user",
+    "pages/types/types",
+    "pages/infor/infor",
+    "pages/recmd/recmd",
+    "pages/apply/apply",
+    "pages/setque/setque",
+    "pages/fback/fback",
+    "pages/que/que",
+    "pages/l_que/l_que",
+    "pages/l_types/l_types",
+     "pages/u_que/u_que",
+    "pages/u_types/u_types",
+    "pages/alter/alter",
+    "pages/setinfo/setinfo",
+    "pages/result/result",
+    "pages/collect/collect",
+    "pages/mistake/mistake"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0188FB",
+    "navigationBarTitleText": "解题猿音",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath":"image/all_0.png",
+        "selectedIconPath":"image/all_1.png"
+      },
+      {
+        "pagePath":"pages/user/user",
+        "text":"我的",
+        "iconPath":"image/user_0.png",
+        "selectedIconPath":"image/user_1.png"
+      }
+    ],
+    "selectedColor":"#0188FB"
+  }
+}

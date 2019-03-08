@@ -1,0 +1,93 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="container">
+  <view class="top">
+    <view class="question">
+      <text class="head">{{queInfo.name}}</text>
+    </view>
+    <block wx:if="{{type==1}}">
+      <view class="que-detail" >
+        <view class="que-choice" wx:for="{{queInfo.answer}}">
+          <view class="queInfo-item {{queClass[index]}}" data-qid="{{queInfo.id}}" data-ans="{{index}}" bindtap="checkAns">{{index}}. {{item}}</view>
+        </view>
+      </view>
+
+        <view wx:if="{{check==false}}" style="width: 680rpx;background: #F2DEDE;color: #A94442;padding: 15rpx;font-size: 30rpx;border-radius: 4px;margin: 0 auto"><text>回答错误\n解析: {{queInfo.info}}\n解析来源：{{queInfo.source}}</text></view>
+        <view wx:if="{{check==true}}" style="width: 680rpx;background: #DFF0D8;color: #3C763D;padding: 15rpx;font-size: 30rpx;border-radius: 4px;margin: 0 auto"><text>回答正确\n解析: {{queInfo.info}}\n解析来源：{{queInfo.source}}</text></view>
+        <view class="star">
+           <text>作答量: {{queInfo.view}}</text>
+        </view>
+
+        <view class="star">
+          <text>星级: </text>
+          <view class="sBox" wx:for="{{num}}" wx:if="{{index<queInfo.star}}">
+            <image  src="../../image/star_0.png"></image>
+          </view>
+          <view class="sBox" wx:for="{{num}}" wx:if="{{index<5-queInfo.star}}">
+            <image  src="../../image/star_1.png"></image>
+          </view>
+        </view>
+
+        <view class="heart" bindtap="collect">
+          <image wx:if="{{like==1}}"  src="../../image/heart.png"></image>
+          <image wx:if="{{like==0}}"  src="../../image/heart_1.png"></image>
+        </view>
+
+        <view wx:if="{{btnShow==1}}"  class="answer" bindtap="showCom" style="margin-bottom: 50rpx;margin-top: 20rpx">
+          查看全部12个评论
+        </view>
+
+    </block>
+
+    <block wx:if="{{type==2}}">
+
+      <view class="star">
+           <text>作答量: {{queInfo.view}}</text>
+        </view>
+
+        <view class="star">
+          <text>星级: </text>
+          <view class="sBox" wx:for="{{num}}" wx:if="{{index<queInfo.star}}">
+            <image  src="../../image/star_0.png"></image>
+          </view>
+          <view class="sBox" wx:for="{{num}}" wx:if="{{index<5-queInfo.star}}">
+            <image  src="../../image/star_1.png"></image>
+          </view>
+        </view>
+
+        <view class="heart" bindtap="collect">
+          <image wx:if="{{like==1}}"  src="../../image/heart.png"></image>
+          <image wx:if="{{like==0}}"  src="../../image/heart_1.png"></image>
+        </view>
+
+        <view  wx:if="{{btnShow==1}}"  class="answer" bindtap="showCom" style="margin-bottom: 50rpx;margin-top: 20rpx">
+          查看解析以及评论
+        </view>
+
+      <view  wx:if="{{com==1}}" style="width:670rpx;padding: 30rpx;border: 1px solid #E8E8E8;border-radius: 4px;text-align: left;font-size: 33rpx;color: #08365F;margin-top: 20rpx;-webkit-box-orient: vertical;word-break: break-all;margin-left:10rpx;line-height: 1.7">
+
+          <template is="wxParse" data="{{wxParseData:shortAns.nodes}}"/>
+          <text>解析来源：{{queInfo.source}}</text>
+      </view>
+    </block>
+
+    
+    <view wx:if="{{com==1}}" style="margin-top:20rpx;border-top: 10rpx solid #E8E8E8">
+      <view class="answer-infor" wx:for="{{comment}}">
+        <view class="user">
+          <image class="user-img" src="{{item.user.pic}}"></image>
+          <view class="user-info">
+            <text class="user-name">{{item.user.name}}</text>
+            <text class="time">{{item.time}}</text>
+          </view>
+          
+        </view>
+        <view class="ans">
+            {{item.content}}
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view style="font-size:32rpx;width:50%;background:#0188FB;color:white;position:fixed;bottom:0;left:0;text-align: center;padding: 20rpx" data-cid="{{preIndex}}" bindtap="showQue">{{pre}}</view>
+  <view style="font-size:32rpx;width:50%;background:#0188FB;color:white;position:fixed;bottom:0;right:0;text-align: center;padding: 20rpx" data-cid="{{nextIndex}}" bindtap="showQue">{{next}}</view>
+</view>
